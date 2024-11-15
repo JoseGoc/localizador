@@ -1,0 +1,78 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Galeria</title>
+</head>
+<style>
+    section{
+        display: flex;
+        width: 600px;
+        height: 430px;
+    }
+    section img {
+        width: 0px;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: .8;
+        transition: .5s ease;
+    }
+    section img:hover{
+        cursor: crosshair;
+        width: 300px;
+        opacity: 1;
+        filter: contrast(120%);
+    }
+
+    /* Estilo del formulario */
+    form {
+        margin-top: 20px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input, textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 10px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background-color: #2980b9;
+    }
+</style>
+<body>
+    <section>
+        <img src="https://hips.hearstapps.com/hmg-prod/images/hulk-vengadores-5-1564393491.jpg?crop=1xw:0.45013333333333333xh;center,top&resize=980:*">
+        <img src="https://lumiere-a.akamaihd.net/v1/images/pp_avengersageofultron_herobanner_19907_d2772500.jpeg">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/vengadores-endgame-protagonistas-morir-capitan-america-1549554474.jpg?crop=1xw:1xh;center,top&resize=980:*">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/deadpool-y-lobezno-critica-669ff2cac58d4.jpg?resize=980:*">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/blade-wesley-snipes-66ac9e5f59e95.jpg?crop=0.564xw:1.00xh;0.250xw,0&resize=980:*">
+    </section>
+
+    <section>
+        <form id="commentForm" action="#">
+            <h3>Deja tu comentario:</h3>
+            <input type="text" id="name" placeholder="Tu nombre" required>
+            <textarea id="comment" rows="4" placeholder="Escribe tu comentario" required></textarea>
+            <button type="submit">Enviar comentario</button>
+        </form>
+        <p id="responseMessage"></p>
+    </section>
+
+    <!-- Vincular el archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

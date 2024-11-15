@@ -1,0 +1,46 @@
+/* Reset básico para eliminar márgenes y rellenos predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para el body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Estilo para el título */
+h1 {
+    text-align: center;
+    color: #3498db;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para el texto del contenido */
+p {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Asegura que el contenido sea responsivo en pantallas pequeñas */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
